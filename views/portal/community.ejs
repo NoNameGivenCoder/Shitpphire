@@ -1,6 +1,8 @@
 <%- include('./partials/header', {account_needed : true, account : account[0] }) %>
 
     <body onload="wiiuBrowser.lockUserOperation(false); endLoading();">
+<!--The Wii U Browser may be able to load the preview, but not actually play the video, which is funny-->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u6RqBUa3nq8?si=zh55BT9tUlRnH8Eo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <%- include('./partials/sidebar.ejs', { homePage : false, miiURL : `http://mii-images.account.nintendo.net/${account[0].hash}_normal_face.png`, page : "community" }) %>
 
             <div class="postUI" style="display: none;" id="postUI">
